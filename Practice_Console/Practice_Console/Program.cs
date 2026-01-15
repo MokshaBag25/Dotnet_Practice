@@ -179,72 +179,224 @@ using System.Xml.Linq;
 
 
 
-enum HabitatType
-{
-    Jungle,
-    Ocean,
-    Desert,
-    Arctic
-}
+//enum HabitatType
+//{
+//    Jungle,
+//    Ocean,
+//    Desert,
+//    Arctic
+//}
 
-enum ConversationStatus
-{
-    LeastConcern,
-    Vulnerable,
-    Endangered
-}
+//enum ConversationStatus
+//{
+//    LeastConcern,
+//    Vulnerable,
+//    Endangered
+//}
 
 
-class WildAnimal
-{
-    public string Name { get; set; }
-    public string Habitat { get; set; }
+//class WildAnimal
+//{
+//    public string Name { get; set; }
+//    public string Habitat { get; set; }
 
-    public WildAnimal(string name, string habitat)
-    {
-        Name = name;
-        Habitat = habitat;
-    }
-}
+//    public WildAnimal(string name, string habitat)
+//    {
+//        Name = name;
+//        Habitat = habitat;
+//    }
+//}
 
-class ZooAnimal
-{
-    public string Species { get; set; }
+//class ZooAnimal
+//{
+//    public string Species { get; set; }
 
-    public int Weight { get; set; }
-    public ZooAnimal(string species, int weight)
-    {
-        this.Species = species;
-        this.Weight = weight;
-    }
-}
+//    public int Weight { get; set; }
+//    public ZooAnimal(string species, int weight)
+//    {
+//        this.Species = species;
+//        this.Weight = weight;
+//    }
+//}
 
-class program
-{
-    static string Animal(ConversationStatus cs)
-    {
-        switch (cs)
-        {
-            case ConversationStatus.LeastConcern:
-                return "LeastConcern";
-            case ConversationStatus.Vulnerable:
-                return "Vulnerable";
-            case ConversationStatus.Endangered:
-                return "Endangered";
-            default:
-                return "Invalid";
-        }
-    }
+//class program
+//{
+//    static string Animal(ConversationStatus cs)
+//    {
+//        switch (cs)
+//        {
+//            case ConversationStatus.LeastConcern:
+//                return "LeastConcern";
+//            case ConversationStatus.Vulnerable:
+//                return "Vulnerable";
+//            case ConversationStatus.Endangered:
+//                return "Endangered";
+//            default:
+//                return "Invalid";
+//        }
+//    }
 
-    public static void Main(string[] args)
-    {
-        WildAnimal PolarBear = new WildAnimal("Polar Bear", "Arctic");
-        Console.WriteLine($"The {PolarBear.Name} lives in {PolarBear.Habitat}");
+//    public static void Main(string[] args)
+//    {
+//        WildAnimal PolarBear = new WildAnimal("Polar Bear", "Arctic");
+//        Console.WriteLine($"The {PolarBear.Name} lives in {PolarBear.Habitat}");
 
-        ConversationStatus status = ConversationStatus.Endangered;
-        Console.WriteLine($"Alert: The Red Panda is {Animal(status)}!");
+//        ConversationStatus status = ConversationStatus.Endangered;
+//        Console.WriteLine($"Alert: The Red Panda is {Animal(status)}!");
 
-        ZooAnimal Elephant = new ZooAnimal("Elephant", 5000);
-        Console.WriteLine($"Registered: {Elephant.Species}, Weight: {Elephant.Weight} kg");
-    }
-}
+//        ZooAnimal Elephant = new ZooAnimal("Elephant", 5000);
+//        Console.WriteLine($"Registered: {Elephant.Species}, Weight: {Elephant.Weight} kg");
+//    }
+//}
+
+//using System.Collections;
+
+//class program
+//{
+//    static void Main (string[] args)
+//    {
+//        List<string> guestName = new List<string>();
+//        guestName.Add("ceo");
+//        guestName.Add("manager");
+//        guestName.Add("hr");
+
+//        guestName[1] = "Master chief";
+
+//        Console.WriteLine($"Total number of guest : {guestName.Count()}");
+
+//        List<int> numbers = [5, 12, 8, 20, 3];
+
+//        foreach (int number in numbers)
+//        {
+//            if (number > 10)
+//            {
+//                Console.WriteLine(number);
+//            }
+//        }
+
+//        List<double> prices = [36.92, 47.92, 57.73, 85.52, 92.65];
+//    }
+
+//    static void ArrayListvList()
+//    {
+//        ArrayList oldList = new ArrayList();
+//        int val1 = (int)oldList[1];
+
+//        List<int> list = new List<int>();
+//        list.Add(55);
+//        list.Add(567);
+
+//        int lisval = list[1];
+//        Hashtable ht = new Hashtable();
+//        ht.Add(22, lisval);
+//        ht.Add(78, lisval);
+
+//    }
+
+//    static void example()
+//    {
+//        List<string> animals = ["Dog", "cat", "lion", "tiger"];
+//        IEnumerable<string> strings = animals.ToList();
+
+//        foreach (string animal in animals)
+//        {
+//            Console.WriteLine(animal);
+//        }
+//        animals.Count();
+//    }
+
+//    static void guestList()
+//    {
+//        List<string> guestName = new List<string>();
+//        guestName.Add("ceo");
+//        guestName.Add("manager");
+//        guestName.Add("hr");
+
+//        guestName[1] = "Master chief";
+
+//        foreach (string name in guestName)
+//        {
+//            Console.WriteLine(guestName);
+//        }
+//    }
+//}
+
+//class program
+//{
+//    public class DualHolder<T1, T2>
+//    {
+//        public T1 Item1 { get; set; }
+//        public T2 Item2 { get; set; }
+
+//        public DualHolder(T1 item1, T2 item2)
+//        {
+//            Item1 = item1;
+//            Item2 = item2;
+//        }
+
+//        public void Show()
+//        {
+//            Console.WriteLine($"Item1 : {Item1}");
+//            Console.WriteLine($"Item2 : {Item2}");
+//        }
+
+//        public static void Swap<T>(ref T a, ref T b)
+//        {
+//            T temp = a;
+//            a = b;
+//            b = temp;
+//        }
+//    }
+
+//    public static void Main( string[] args )
+//    {
+//        var holder1 = new DualHolder<string, int>("Age", 22);
+//        var holder2 = new DualHolder<string, int>("Weight", 50);
+
+//        holder1.Show();
+//        holder2.Show();
+
+
+//    }
+//}
+
+//namespace calc;
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        RunCalc();
+//    }
+
+//    static void  RunCalc()
+//    {
+//        try
+//        {
+//            Console.WriteLine("Enter a number to divided by 100");
+//            string input = Console.ReadLine();
+//            int divisor = int.Parse(input);
+//            int result = 100 / divisor;
+//            Console.WriteLine(result);
+//        }
+//        catch (DivideByZeroException ex)
+//        {
+//            Console.WriteLine("Cannot divide by zero");
+//        }
+
+//        catch (FormatException fx)
+//        {
+//            Console.WriteLine("Formatting is not good, please enter a number");
+//        }
+
+//        catch (ArithmeticException ex)
+//        {
+//            Console.WriteLine("Arithmetic exception");
+//        }
+
+//        catch (Exception ex)
+//        {
+//            Console.WriteLine("Default Exception");
+//        }
+//    }
+//}

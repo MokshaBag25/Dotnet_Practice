@@ -1,0 +1,15 @@
+﻿@model List<mvc_demo.Models.Employee>
+
+<ul>
+    @foreach (var emp in Model)
+    {
+        <li>@emp.Id - @emp.Name - @emp.Department</li>
+        <li>
+            @if (emp.Salary > 1000)
+            {
+                <h1>High Salary</h1>
+            }
+        </li>
+    }
+    )
+</ul>
