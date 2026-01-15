@@ -13,6 +13,7 @@ namespace GitDemo
             var app = builder.Build();
 
             //random change
+            //random change
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
